@@ -1,2 +1,0 @@
-# chxiaomian.github.io
-homepage
