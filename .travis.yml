@@ -1,13 +1,13 @@
-language: node_js # 设置语言
+language: node_js 
 
-node_js: stable # 设置相应版本
+node_js: stable 
 
 install:
-    - npm install # 安装hexo及插�
+    - npm install 
 
 script:
-    - hexo clean # 清除
-    - hexo g # 生成
+    - hexo clean 
+    - hexo g 
 
 after_script:
     - cd ./public
