@@ -3,7 +3,7 @@ language: node_js # 设置语言
 node_js: stable # 设置相应版本
 
 install:
-    - npm install # 安装hexo及插件
+    - npm install # 安装hexo及插�
 
 script:
     - hexo clean # 清除
