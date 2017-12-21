@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Web开发调试工具--Fiddler | XiaoMian&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="FiddlerFiddler官方下载地址 简介Fiddler是Telerik提供的一款web调试工具。通过代理的方式拦截从浏览器到服务器之间的Http流量，从而实现监控Http请求，也可以很方便的学习Http的知识。  Fiddler工作原理 Fiddler 由于工作在浏览器和服务器中间，Fiddler 能够查看Http请求的详细信息。通过Http传送的数据，都会被记录并分析、修改。 作为Http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web开发调试工具--Fiddler">
+<meta property="og:url" content="http://chxiaomian.github.io/2017/12/21/fiddler/index.html">
+<meta property="og:site_name" content="XiaoMian&#39;s Blog">
+<meta property="og:description" content="FiddlerFiddler官方下载地址 简介Fiddler是Telerik提供的一款web调试工具。通过代理的方式拦截从浏览器到服务器之间的Http流量，从而实现监控Http请求，也可以很方便的学习Http的知识。  Fiddler工作原理 Fiddler 由于工作在浏览器和服务器中间，Fiddler 能够查看Http请求的详细信息。通过Http传送的数据，都会被记录并分析、修改。 作为Http">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/1.jpg">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/2.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/3.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/4.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/5.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/6.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/7.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/8.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/9.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/10.png">
+<meta property="og:image" content="http://chxiaomian.github.io/2017/12/21/content/11.png">
+<meta property="og:updated_time" content="2017-12-21T12:57:49.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web开发调试工具--Fiddler">
+<meta name="twitter:description" content="FiddlerFiddler官方下载地址 简介Fiddler是Telerik提供的一款web调试工具。通过代理的方式拦截从浏览器到服务器之间的Http流量，从而实现监控Http请求，也可以很方便的学习Http的知识。  Fiddler工作原理 Fiddler 由于工作在浏览器和服务器中间，Fiddler 能够查看Http请求的详细信息。通过Http传送的数据，都会被记录并分析、修改。 作为Http">
+<meta name="twitter:image" content="http://chxiaomian.github.io/2017/12/21/content/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoMian&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XiaoMian&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Front-End Developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chxiaomian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-fiddler" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/21/fiddler/" class="article-date">
+  <time datetime="2017-12-21T12:57:49.992Z" itemprop="datePublished">2017-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Web开发调试工具--Fiddler
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h1><p><a href="http://www.telerik.com/fiddler" target="_blank" rel="noopener">Fiddler官方下载地址</a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Fiddler是Telerik提供的一款web调试工具。通过代理的方式拦截从浏览器到服务器之间的Http流量，从而实现监控Http请求，也可以很方便的学习Http的知识。</p>
+<p><img src="../content/1.jpg" alt=""></p>
+<h1 id="Fiddler工作原理"><a href="#Fiddler工作原理" class="headerlink" title="Fiddler工作原理"></a>Fiddler工作原理</h1><ol>
+<li>Fiddler 由于工作在浏览器和服务器中间，Fiddler 能够查看Http请求的详细信息。通过Http传送的数据，都会被记录并分析、修改。</li>
+<li>作为Http代理，可以在请求到达服务器之前对Request内容进行修改。默认代理为<a href="http://127.0.0.1:8888" target="_blank" rel="noopener">http://127.0.0.1:8888</a> 。也可以把配置修改为其他端口。</li>
+<li>Fiddler在获取响应以后，还可以修改相应结果的详细信息。即反向代理的作用。</li>
+</ol>
+<h1 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h1><ol>
+<li>查看Http请求：可以查看请求的详细信息。Request Header中的Method，Path，QueryString，Http版本信息以及Cookie信息等。<br><img src="../content/2.png" alt=""><br><img src="../content/3.png" alt=""></li>
+<li>查看相应：可以查看相应的详细信息，Http状态码、响应类型、压缩方式、服务器信息等。<br><img src="../content/4.png" alt=""></li>
+<li>反向代理：可以把Http响应替换成本地文件，可以方便的调试线上内容。<br>使用步骤如下:<br><img src="../content/5.png" alt=""><br>AutoResponder中添加规则，拦截符合规则的Http Response,然后就如下图中所示：请求被中断，就可以修改响应结果了，Fiddler中预设了几种Response可以选择。<br><img src="../content/6.png" alt=""><br>修改完以后点击Run to Completion，Response继续响应，就能看到修改以后的结果了。<br><img src="../content/7.png" alt=""><br>也可以选择其他模板，手动修改其中的Html内容。<br><img src="../content/8.png" alt=""><br>修改以后的响应结果就是伪造的结果了.</li>
+<li>伪造请求：可以修改一个请求的头部，参数等信息然后发给后端。<br>在请求上右键 Replay -&gt; Reissue from Composer<br><img src="../content/9.png" alt=""><br>把Method修改为Post，点击Execute执行请求。<br>看到请求被中断<br><img src="../content/10.png" alt=""><br>返回结果是405，Method不被允许，以为原来的Method为Get。<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>通过学习使用Fiddler，对Http协议也能有一个整体的了解和掌握。Http协议的请求响应的各个部分都有一个详细的可视化的体现，而且还能通过中断Http的过程来伪造请求及响应，对Http的过程也有一个比较形象的理解。<br><img src="../content/11.png" alt=""><h4 id="在捕获的Http列表页中能够清晰的看到请求的文件类型、Http状态码、协议、请求的域名。Url以及详情的大小和是否缓存等信息。这和前端优化息息相关。Http状态码主要有以下几种类型"><a href="#在捕获的Http列表页中能够清晰的看到请求的文件类型、Http状态码、协议、请求的域名。Url以及详情的大小和是否缓存等信息。这和前端优化息息相关。Http状态码主要有以下几种类型" class="headerlink" title="在捕获的Http列表页中能够清晰的看到请求的文件类型、Http状态码、协议、请求的域名。Url以及详情的大小和是否缓存等信息。这和前端优化息息相关。Http状态码主要有以下几种类型"></a>在捕获的Http列表页中能够清晰的看到请求的文件类型、Http状态码、协议、请求的域名。Url以及详情的大小和是否缓存等信息。这和前端优化息息相关。Http状态码主要有以下几种类型</h4>2XX：代表请求已经成功被服务器接收并处理。成功状态码<p><br>200：OK，请求已经成功</p><p><br>204：No Content 服务器成功处理请求，但不需要返回内容</p><p><br>206：服务器成功处理了部分请求，Http可以基于此类响应来实现断点续传功能。</p><p><br>3XX：代表客户端需要进一步操作才能完成请求。重定向状态码</p><p><br>301：资源已永久移动到新位置，新的URI应当在响应的Location域中返回。</p><p><br>302：临时重定向。</p><p><br>303：当前请求的响应可以在另一个URI上被找到，而且客户端应当以Get的方式访问那个资源。</p><p><br>304：客户端发送了一个待条件的Get请求而且该请求已经被允许，而文档的内容并没有改变，则服务器返回304，一般认为客户端有缓存</p><p><br>307：与302类似，临时重定向。</p><p><br>4XX：客户端错误，请求错误</p><p><br>400,：语义有误，服务器无法理解</p><p><br>401：Unauthorized，当前请求需要用户验证</p><p><br>403：Forbidden 服务器拒绝执行</p><p><br>404：Not Found 请求失败，请求的资源未被在服务器上发现。</p><p><br>405：请求行中指定的请求方法不能被用于请求相应的资源</p><p><br>5XX：服务端错误</p><p><br>500：服务器遇到未知错误</p><p><br>502：作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。</p><p><br>503：由于临时的服务器维护或者过载，服务器当前无法处理请求。</p><p><br>504：网关超时</p><p></p></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chxiaomian.github.io/2017/12/21/fiddler/" data-id="cjbght65p0000nd98zhyuymu3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/21/fiddler/">Web开发调试工具--Fiddler</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/21/use-github-build-a-blog/">使用Gitbug Pages 搭建静态博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Cheng Xiao Mian<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
