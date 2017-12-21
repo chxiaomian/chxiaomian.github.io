@@ -68,7 +68,7 @@
     <article id="post-fiddler" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/fiddler/" class="article-date">
-  <time datetime="2017-12-21T13:33:22.919Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:35:54.968Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -105,65 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/fiddler/" data-id="cjbgj2w9d0000n98o2iffbko9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-form-formdata" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/12/21/form-formdata/" class="article-date">
-  <time datetime="2017-12-21T13:33:22.919Z" itemprop="datePublished">2017-12-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="title-Form-表单-Formdata"><a href="#title-Form-表单-Formdata" class="headerlink" title="title:Form 表单  Formdata"></a>title:Form 表单  Formdata</h2><h2 id="Form表单"><a href="#Form表单" class="headerlink" title="Form表单"></a>Form表单</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span> 标签用于为用户输入创建 HTML 表单。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; <span class="attr">form</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt; /<span class="attr">form</span> &gt;</span></span><br><span class="line">里面包含的数据将被提交到服务器.</span><br><span class="line"></span><br><span class="line">可以使用表单来上传文件。</span><br></pre></td></tr></table></figure>
-<h3 id="三个部分"><a href="#三个部分" class="headerlink" title="三个部分"></a>三个部分</h3><p><strong>表单标签</strong>：定义表单要提交到的服务器的地址和提交的http方法。</p>
-<p><strong>表单域</strong>：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。</p>
-<p><strong>表单按钮</strong>：包括提交按钮、复位按钮和一般按钮；用于将数据传送到服务器上或者取消输入，还可以用表单按钮来控制其他定义了处理脚本的处理工作。</p>
-<h3 id="成功控件"><a href="#成功控件" class="headerlink" title="成功控件"></a>成功控件</h3><p>浏览器并不是将所有的表单控件全部发送到服务器的，而是会查找所有的【成功控件】，只将这些成功控件的数据发送到服务端</p>
-<p>成功控件就是：每个表单中的控件都应该有一个<strong>name属性</strong>和”当前值“  <strong>value属性</strong>， 在提交时，它们将以 name=value 的形式做为提交数据的一部分。</p>
-<p>成功控件有以下规定：</p>
-<ol>
-<li>控件不能是【禁用】状态，即指定【disabled=”disabled”】。即：禁用的控件将不是成功控件。</li>
-<li>如果一个表单包含了多个提交按键，那么仅当用户点击的那个提交按钮才算是成功控件。</li>
-<li>对于checkbox控件来说，只有被用户勾选的才算是成功控件。</li>
-<li>对于radio button来说，只有被用户勾选的才算是成功控件。</li>
-<li>对于select控件来说，所有被选择的选项都做为成功控件，name由select控件提供。</li>
-<li>对于file上传文件控件来说，如果它包含了选择的文件，那么它将是一个成功控件。</li>
-</ol>
-<h4 id="需要注意的几点："><a href="#需要注意的几点：" class="headerlink" title="需要注意的几点："></a>需要注意的几点：</h4><p>提交方式：<br>如果是【post】，那么表单数据将放在请求体中被发送出去。<br>如果是【get】，那么表单数据将会追加到查询字符串中，以查询字符串的形式提交到服务端。<br>建议：表单通常还是以post方式提交比较好，这样可以不破坏URL，况且URL还有长度限制。</p>
-<h3 id="浏览器处理过程"><a href="#浏览器处理过程" class="headerlink" title="浏览器处理过程"></a>浏览器处理过程</h3><p>浏览是如何处理表单数据的。这个过程大致分为4个阶段：</p>
-<ol>
-<li>识别所有的成功控件。</li>
-<li>为所有的成功控件创建一个数据集合，它们包含 control-name/current-value 这样的值对。</li>
-<li>按照form.enctype指定的编码规则对前面准备好的数据进行编码。编码规则将放在请求中，用【Content-Type】指出。</li>
-<li>提交编码后的数据。此时会区分post,get二种情况，提交的地址由form.action属性指定的。</li>
-</ol>
-<h2 id="Formdata"><a href="#Formdata" class="headerlink" title="Formdata"></a>Formdata</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a href="http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html" target="_blank" rel="noopener">http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html</a></li>
-<li><p><a href="http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772" target="_blank" rel="noopener">http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772</a></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData</a></p>
-</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects</a></li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbgj2w9m0001n98o1kqn009n" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/fiddler/" data-id="cjbgj66hs0000n28hngnaws2q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +118,7 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/hello-world/" class="article-date">
-  <time datetime="2017-12-21T13:33:22.919Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:35:54.968Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -208,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/hello-world/" data-id="cjbgj2w9p0002n98og4nyw2xr" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/hello-world/" data-id="cjbgj66i00001n28h8c2kkzqz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +163,7 @@
     <article id="post-javascript-type-judgement" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/javascript-type-judgement/" class="article-date">
-  <time datetime="2017-12-21T13:33:22.919Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:35:54.968Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -257,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbgj2w9r0003n98o5iowacmm" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbgj66i40002n28huz9bbkti" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +212,7 @@
     <article id="post-use-github-build-a-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/use-github-build-a-blog/" class="article-date">
-  <time datetime="2017-12-21T13:33:22.919Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:35:54.968Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -312,7 +254,74 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/use-github-build-a-blog/" data-id="cjbgj2w9t0004n98oyq91l76n" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/use-github-build-a-blog/" data-id="cjbgj66i60003n28hjghy3mx6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-form-formdata" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/21/form-formdata/" class="article-date">
+  <time datetime="2017-12-21T13:35:54.968Z" itemprop="datePublished">2017-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/21/form-formdata/">Form 表单  Formdata</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Form表单"><a href="#Form表单" class="headerlink" title="Form表单"></a>Form表单</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span> 标签用于为用户输入创建 HTML 表单。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; <span class="attr">form</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt; /<span class="attr">form</span> &gt;</span></span><br><span class="line">里面包含的数据将被提交到服务器.</span><br><span class="line"></span><br><span class="line">可以使用表单来上传文件。</span><br></pre></td></tr></table></figure>
+<h3 id="三个部分"><a href="#三个部分" class="headerlink" title="三个部分"></a>三个部分</h3><p><strong>表单标签</strong>：定义表单要提交到的服务器的地址和提交的http方法。</p>
+<p><strong>表单域</strong>：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。</p>
+<p><strong>表单按钮</strong>：包括提交按钮、复位按钮和一般按钮；用于将数据传送到服务器上或者取消输入，还可以用表单按钮来控制其他定义了处理脚本的处理工作。</p>
+<h3 id="成功控件"><a href="#成功控件" class="headerlink" title="成功控件"></a>成功控件</h3><p>浏览器并不是将所有的表单控件全部发送到服务器的，而是会查找所有的【成功控件】，只将这些成功控件的数据发送到服务端</p>
+<p>成功控件就是：每个表单中的控件都应该有一个<strong>name属性</strong>和”当前值“  <strong>value属性</strong>， 在提交时，它们将以 name=value 的形式做为提交数据的一部分。</p>
+<p>成功控件有以下规定：</p>
+<ol>
+<li>控件不能是【禁用】状态，即指定【disabled=”disabled”】。即：禁用的控件将不是成功控件。</li>
+<li>如果一个表单包含了多个提交按键，那么仅当用户点击的那个提交按钮才算是成功控件。</li>
+<li>对于checkbox控件来说，只有被用户勾选的才算是成功控件。</li>
+<li>对于radio button来说，只有被用户勾选的才算是成功控件。</li>
+<li>对于select控件来说，所有被选择的选项都做为成功控件，name由select控件提供。</li>
+<li>对于file上传文件控件来说，如果它包含了选择的文件，那么它将是一个成功控件。</li>
+</ol>
+<h4 id="需要注意的几点："><a href="#需要注意的几点：" class="headerlink" title="需要注意的几点："></a>需要注意的几点：</h4><p>提交方式：<br>如果是【post】，那么表单数据将放在请求体中被发送出去。<br>如果是【get】，那么表单数据将会追加到查询字符串中，以查询字符串的形式提交到服务端。<br>建议：表单通常还是以post方式提交比较好，这样可以不破坏URL，况且URL还有长度限制。</p>
+<h3 id="浏览器处理过程"><a href="#浏览器处理过程" class="headerlink" title="浏览器处理过程"></a>浏览器处理过程</h3><p>浏览是如何处理表单数据的。这个过程大致分为4个阶段：</p>
+<ol>
+<li>识别所有的成功控件。</li>
+<li>为所有的成功控件创建一个数据集合，它们包含 control-name/current-value 这样的值对。</li>
+<li>按照form.enctype指定的编码规则对前面准备好的数据进行编码。编码规则将放在请求中，用【Content-Type】指出。</li>
+<li>提交编码后的数据。此时会区分post,get二种情况，提交的地址由form.action属性指定的。</li>
+</ol>
+<h2 id="Formdata"><a href="#Formdata" class="headerlink" title="Formdata"></a>Formdata</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html" target="_blank" rel="noopener">http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html</a></li>
+<li><p><a href="http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772" target="_blank" rel="noopener">http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData</a></p>
+</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbgj66i80004n28hlb3fkuhn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,10 +365,6 @@
           </li>
         
           <li>
-            <a href="/2017/12/21/form-formdata/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2017/12/21/hello-world/">Hello World</a>
           </li>
         
@@ -369,6 +374,10 @@
         
           <li>
             <a href="/2017/12/21/use-github-build-a-blog/">使用Gitbug Pages 搭建静态博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/21/form-formdata/">Form 表单  Formdata</a>
           </li>
         
       </ul>
