@@ -1,0 +1,27 @@
+language: node_js # 设置语言
+
+node_js: stable # 设置相应版本
+
+install:
+    - npm install # 安装hexo及插�
+
+script:
+    - hexo clean # 清除
+    - hexo g # 生成
+
+after_script:
+    - cd ./public
+    - git init
+    - git config user.name "chxiaomian" 
+    - git config user.email "chxiaomian@gmail.com" 
+    - git add .
+    - git commit -m "Travis CI Auto Builder"
+    - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master 
+
+branches:
+    only:
+        - hexo 
+
+env:
+    global:
+        - GH_REF: github.com/chxiaomian/chxiaomian.github.io.git 
