@@ -5,16 +5,16 @@
   
   <title>XiaoMian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的方式1. typeoftypeof 是一个操">
+  <meta name="description" content="title:JavaScript 类型判断数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XiaoMian&#39;s Blog">
 <meta property="og:url" content="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/index.html">
 <meta property="og:site_name" content="XiaoMian&#39;s Blog">
-<meta property="og:description" content="数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的方式1. typeoftypeof 是一个操">
-<meta property="og:updated_time" content="2017-12-21T13:18:29.272Z">
+<meta property="og:description" content="title:JavaScript 类型判断数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的">
+<meta property="og:updated_time" content="2017-12-21T13:25:24.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XiaoMian&#39;s Blog">
-<meta name="twitter:description" content="数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的方式1. typeoftypeof 是一个操">
+<meta name="twitter:description" content="title:JavaScript 类型判断数据类型在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示： 基本类型：String、Number、Boolean、Symbol、Undefined、Null引用类型：Object Symbol  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。 常见的几种判断JavaScript类型的">
   
     <link rel="alternate" href="/atom.xml" title="XiaoMian&#39;s Blog" type="application/atom+xml">
   
@@ -70,7 +70,7 @@
         <section id="main"><article id="post-javascript-type-judgement" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/javascript-type-judgement/" class="article-date">
-  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:25:24.046Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -79,7 +79,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示：</p>
+        <hr>
+<h2 id="title-JavaScript-类型判断"><a href="#title-JavaScript-类型判断" class="headerlink" title="title:JavaScript 类型判断"></a>title:JavaScript 类型判断</h2><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示：</p>
 <p>基本类型：<code>String、Number、Boolean、Symbol、Undefined、Null</code><br>引用类型：<code>Object</code></p>
 <p><code>Symbol</code>  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。</p>
 <h2 id="常见的几种判断JavaScript类型的方式"><a href="#常见的几种判断JavaScript类型的方式" class="headerlink" title="常见的几种判断JavaScript类型的方式"></a>常见的几种判断JavaScript类型的方式</h2><h3 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1. typeof"></a>1. <code>typeof</code></h3><p><code>typeof</code> 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形式表示<br><code>typeof</code>只有两个用途，就是检测一个元素是否为<code>undefined</code>，或者是否为<code>function</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">''</span>; <span class="comment">// string 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// number 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(); <span class="comment">// symbol 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//boolean 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">//undefined 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> [] ; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// function 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(); <span class="comment">//object 无效</span></span><br></pre></td></tr></table></figure></p>
@@ -96,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbgik8c30003n88lwlaeydal" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbgisnhb0003n78dsed1h6wm" class="article-share-link">Share</a>
       
       
     </footer>
