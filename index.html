@@ -68,7 +68,7 @@
     <article id="post-fiddler" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/fiddler/" class="article-date">
-  <time datetime="2017-12-21T13:10:50.862Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -105,7 +105,64 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/fiddler/" data-id="cjbgi9twj0000n98s09ertua8" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/fiddler/" data-id="cjbgik8bi0000n88ltcfyz9as" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-form-formdata" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/21/form-formdata/" class="article-date">
+  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Form表单"><a href="#Form表单" class="headerlink" title="Form表单"></a>Form表单</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span> 标签用于为用户输入创建 HTML 表单。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; <span class="attr">form</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt; /<span class="attr">form</span> &gt;</span></span><br><span class="line">里面包含的数据将被提交到服务器.</span><br><span class="line"></span><br><span class="line">可以使用表单来上传文件。</span><br></pre></td></tr></table></figure>
+<h3 id="三个部分"><a href="#三个部分" class="headerlink" title="三个部分"></a>三个部分</h3><p><strong>表单标签</strong>：定义表单要提交到的服务器的地址和提交的http方法。</p>
+<p><strong>表单域</strong>：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。</p>
+<p><strong>表单按钮</strong>：包括提交按钮、复位按钮和一般按钮；用于将数据传送到服务器上或者取消输入，还可以用表单按钮来控制其他定义了处理脚本的处理工作。</p>
+<h3 id="成功控件"><a href="#成功控件" class="headerlink" title="成功控件"></a>成功控件</h3><p>浏览器并不是将所有的表单控件全部发送到服务器的，而是会查找所有的【成功控件】，只将这些成功控件的数据发送到服务端</p>
+<p>成功控件就是：每个表单中的控件都应该有一个<strong>name属性</strong>和”当前值“  <strong>value属性</strong>， 在提交时，它们将以 name=value 的形式做为提交数据的一部分。</p>
+<p>成功控件有以下规定：</p>
+<ol>
+<li>控件不能是【禁用】状态，即指定【disabled=”disabled”】。即：禁用的控件将不是成功控件。</li>
+<li>如果一个表单包含了多个提交按键，那么仅当用户点击的那个提交按钮才算是成功控件。</li>
+<li>对于checkbox控件来说，只有被用户勾选的才算是成功控件。</li>
+<li>对于radio button来说，只有被用户勾选的才算是成功控件。</li>
+<li>对于select控件来说，所有被选择的选项都做为成功控件，name由select控件提供。</li>
+<li>对于file上传文件控件来说，如果它包含了选择的文件，那么它将是一个成功控件。</li>
+</ol>
+<h4 id="需要注意的几点："><a href="#需要注意的几点：" class="headerlink" title="需要注意的几点："></a>需要注意的几点：</h4><p>提交方式：<br>如果是【post】，那么表单数据将放在请求体中被发送出去。<br>如果是【get】，那么表单数据将会追加到查询字符串中，以查询字符串的形式提交到服务端。<br>建议：表单通常还是以post方式提交比较好，这样可以不破坏URL，况且URL还有长度限制。</p>
+<h3 id="浏览器处理过程"><a href="#浏览器处理过程" class="headerlink" title="浏览器处理过程"></a>浏览器处理过程</h3><p>浏览是如何处理表单数据的。这个过程大致分为4个阶段：</p>
+<ol>
+<li>识别所有的成功控件。</li>
+<li>为所有的成功控件创建一个数据集合，它们包含 control-name/current-value 这样的值对。</li>
+<li>按照form.enctype指定的编码规则对前面准备好的数据进行编码。编码规则将放在请求中，用【Content-Type】指出。</li>
+<li>提交编码后的数据。此时会区分post,get二种情况，提交的地址由form.action属性指定的。</li>
+</ol>
+<h2 id="Formdata"><a href="#Formdata" class="headerlink" title="Formdata"></a>Formdata</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html" target="_blank" rel="noopener">http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html</a></li>
+<li><p><a href="http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772" target="_blank" rel="noopener">http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData</a></p>
+</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbgik8bu0001n88lx7ltdnva" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,7 +175,7 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/hello-world/" class="article-date">
-  <time datetime="2017-12-21T13:10:50.862Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -150,7 +207,46 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/hello-world/" data-id="cjbgi9twq0001n98shfmc8jkd" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/hello-world/" data-id="cjbgik8c00002n88lpd1viy9e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript-type-judgement" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/21/javascript-type-judgement/" class="article-date">
+  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示：</p>
+<p>基本类型：<code>String、Number、Boolean、Symbol、Undefined、Null</code><br>引用类型：<code>Object</code></p>
+<p><code>Symbol</code>  是在ES6中引入的一种新的原始数据类型，表示独一无二的值。</p>
+<h2 id="常见的几种判断JavaScript类型的方式"><a href="#常见的几种判断JavaScript类型的方式" class="headerlink" title="常见的几种判断JavaScript类型的方式"></a>常见的几种判断JavaScript类型的方式</h2><h3 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1. typeof"></a>1. <code>typeof</code></h3><p><code>typeof</code> 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形式表示<br><code>typeof</code>只有两个用途，就是检测一个元素是否为<code>undefined</code>，或者是否为<code>function</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">''</span>; <span class="comment">// string 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// number 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(); <span class="comment">// symbol 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//boolean 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">//undefined 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> [] ; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// function 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(); <span class="comment">//object 无效</span></span><br></pre></td></tr></table></figure></p>
+<p><em><code>typeof</code> 存在的问题</em></p>
+<h3 id="2-instanceof"><a href="#2-instanceof" class="headerlink" title="2. instanceof"></a>2. <code>instanceof</code></h3><p>instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false</p>
+<p>instanceof 检测的是原型</p>
+<h3 id="3-constructor"><a href="#3-constructor" class="headerlink" title="3. constructor"></a>3. <code>constructor</code></h3><p>当一个函数 F被定义时，JS引擎会为F添加 prototype 原型，然后再在 prototype上添加一个 constructor 属性，并让其指向 F 的引用</p>
+<p>当执行 var f = new F() 时，F 被当成了构造函数，f 是F的实例对象，此时 F 原型上的 constructor 传递到了 f 上，因此 f.constructor == F</p>
+<h3 id="4-Object-prototype-toString"><a href="#4-Object-prototype-toString" class="headerlink" title="4. Object.prototype.toString()"></a>4. <code>Object.prototype.toString()</code></h3><p><code>toString()</code> 是 <code>Object</code> 的原型方法，调用该方法，默认返回当前对象的 [[Class]]</p>
+<p>它会返回正确的类型。我们需要做的就是<strong>手动处理其返回的字符串</strong>，最终便能获得typeof应该返回的正确字符串。</p>
+<p>可以用来区分：<code>Boolean, Number, String, Function, Array, Date, RegExp, Object, Error</code>等等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">''</span>) ;   <span class="comment">// [object String]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">1</span>) ;    <span class="comment">// [object Number]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>) ; <span class="comment">// [object Boolean]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>()); <span class="comment">//[object Symbol]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>) ; <span class="comment">// [object Undefined]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>) ; <span class="comment">// [object Null]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Function</span>()) ; <span class="comment">// [object Function]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>()) ; <span class="comment">// [object Date]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call([]) ; <span class="comment">// [object Array]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">RegExp</span>()) ; <span class="comment">// [object RegExp]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Error</span>()) ; <span class="comment">// [object Error]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">document</span>) ; <span class="comment">// [object HTMLDocument]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">window</span>) ; <span class="comment">//[object global] window是全局对象 global 的引用</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbgik8c30003n88lwlaeydal" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +259,7 @@
     <article id="post-use-github-build-a-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/21/use-github-build-a-blog/" class="article-date">
-  <time datetime="2017-12-21T13:10:50.862Z" itemprop="datePublished">2017-12-21</time>
+  <time datetime="2017-12-21T13:18:29.272Z" itemprop="datePublished">2017-12-21</time>
 </a>
     
   </div>
@@ -205,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/use-github-build-a-blog/" data-id="cjbgi9twu0002n98sgxp5y1da" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/use-github-build-a-blog/" data-id="cjbgik8c60004n88lw3gk4dcw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +345,15 @@
           </li>
         
           <li>
+            <a href="/2017/12/21/form-formdata/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/12/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/21/javascript-type-judgement/">(no title)</a>
           </li>
         
           <li>
