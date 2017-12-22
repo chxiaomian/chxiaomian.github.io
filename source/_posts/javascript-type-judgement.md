@@ -1,5 +1,8 @@
 ---
 title: JavaScript 类型判断
+date: 2017-12-21 20:18:25
+tags:
+    - JavaScript
 ---
 ## 数据类型
 在 ECMAScript  规范中，共定义了 7 种数据类型，分为 基本类型 和 引用类型 两大类，如下所示：
