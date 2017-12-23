@@ -5,14 +5,17 @@
   
   <title>JavaScript Function | XiaoMian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="JavaScript,Function">
+  <meta name="description" content="JavaScript中,通常情况下,我们都把代码卸载函数里面,我们大部分代码执行都是函数调用的结果,为了更好的理解Function,我们需要了解javascript对象的一些特性.javascript对象有以下一些特性:  可以使用字面量创建 可以赋值给变量/数组/其他对象的属性 可以作为函数的参数传递 有属性 可以作为返回值返回  JavaScript函数拥有JavaScript对象的所有特性,">
+<meta name="keywords" content="JavaScript,Function">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript Function">
 <meta property="og:url" content="http://chxiaomian.github.io/2017/12/22/javascript-function/index.html">
 <meta property="og:site_name" content="XiaoMian&#39;s Blog">
-<meta property="og:updated_time" content="2017-12-22T06:35:23.531Z">
+<meta property="og:description" content="JavaScript中,通常情况下,我们都把代码卸载函数里面,我们大部分代码执行都是函数调用的结果,为了更好的理解Function,我们需要了解javascript对象的一些特性.javascript对象有以下一些特性:  可以使用字面量创建 可以赋值给变量/数组/其他对象的属性 可以作为函数的参数传递 有属性 可以作为返回值返回  JavaScript函数拥有JavaScript对象的所有特性,">
+<meta property="og:updated_time" content="2017-12-23T01:35:21.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Function">
+<meta name="twitter:description" content="JavaScript中,通常情况下,我们都把代码卸载函数里面,我们大部分代码执行都是函数调用的结果,为了更好的理解Function,我们需要了解javascript对象的一些特性.javascript对象有以下一些特性:  可以使用字面量创建 可以赋值给变量/数组/其他对象的属性 可以作为函数的参数传递 有属性 可以作为返回值返回  JavaScript函数拥有JavaScript对象的所有特性,">
   
     <link rel="alternate" href="/atom.xml" title="XiaoMian&#39;s Blog" type="application/atom+xml">
   
@@ -87,11 +90,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>JavaScript中,通常情况下,我们都把代码卸载函数里面,我们大部分代码执行都是函数调用的结果,为了更好的理解Function,我们需要了解javascript对象的一些特性.<br>javascript对象有以下一些特性:</p>
+<ul>
+<li>可以使用字面量创建</li>
+<li>可以赋值给变量/数组/其他对象的属性</li>
+<li>可以作为函数的参数传递</li>
+<li>有属性</li>
+<li>可以作为返回值返回</li>
+</ul>
+<p>JavaScript函数拥有JavaScript对象的所有特性,而且还可以被调用.那就可以这么说,JavaScript函数就是对象.</p>
+<p>函数同样拥有上面的特性:</p>
+<ul>
+<li>字面量创建</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123; &#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>赋值给变量/数组/和属性</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;;     <span class="comment">//赋值给变量</span></span><br><span class="line"></span><br><span class="line">myArray.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;);    <span class="comment">//添加到数组中</span></span><br><span class="line"></span><br><span class="line">myObj.myFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;;   <span class="comment">//赋值给对象的属性</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>作为参数传递</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params">someFunc</span>) </span>&#123;</span><br><span class="line">    someFunc();</span><br><span class="line">&#125;</span><br><span class="line">myFunc(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>拥有属性</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;;</span><br><span class="line">myFunc.someProperty = <span class="string">"Property"</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>作为参数返回</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="定义JavaScript函数"><a href="#定义JavaScript函数" class="headerlink" title="定义JavaScript函数"></a>定义JavaScript函数</h2><p>JavaScript中 Function 可以通过多种方式去定义:</p>
+<h4 id="函数声明和函数表达式"><a href="#函数声明和函数表达式" class="headerlink" title="函数声明和函数表达式"></a>函数声明和函数表达式</h4><p>JavaScript定义函数最常用的两种方式就是通过<strong>函数声明</strong>和<strong>函数表达式</strong><br>函数声明是<code>function</code> 关键字后面跟着函数名和参数的括号以及大括号.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="string">"Function Declaration"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外一种方式,<strong>函数表达式</strong>就像编写任何JavaScript表达式一样,只有<code>function</code>关键字/参数和函数体,如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">"Function Expression"</span>; &#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h4><p>立即执行函数,就是在定义函数的写入表达式以后被立即执行,可以应用在JavaScript的模块开发中.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = (<span class="function"><span class="keyword">function</span> (<span class="params">param1, param2</span>) </span>&#123; <span class="keyword">return</span> param1 + param2;  &#125;)(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><p>箭头函数是在ES6中添加的新特性,可以看做是通过语法糖的形式对函数表达式进行的简化,箭头函数使用<code>=&gt;</code>符号定义:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> var1 = <span class="function"><span class="params">name</span> =&gt;</span> <span class="string">"Hi "</span> + name;   <span class="comment">//定义箭头函数</span></span><br><span class="line"><span class="keyword">var</span> var2 = var1(<span class="string">"George"</span>);</span><br></pre></td></tr></table></figure>
+<p>如果箭头函数没有参数的话,还可以这样定义:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFunc = <span class="function"><span class="params">()</span> =&gt;</span> alert(<span class="string">'Arrow Function 调用'</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbhjl38y0004n88erxz1pkhu" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbiobe0h0004n58tiw5v59xc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -102,10 +145,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/12/23/use-github-build-a-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用Github Pages 搭建静态博客
+        
+      </div>
+    </a>
   
-    <a href="/2017/12/22/fiddler/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/12/21/form-formdata/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Web开发调试工具--Fiddler</div>
+      <div class="article-nav-title">Form 表单  Formdata</div>
     </a>
   
 </nav>
@@ -156,19 +208,19 @@
       <ul>
         
           <li>
+            <a href="/2017/12/23/fiddler/">Web开发调试工具--Fiddler</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/23/use-github-build-a-blog/">使用Github Pages 搭建静态博客</a>
+          </li>
+        
+          <li>
             <a href="/2017/12/22/javascript-function/">JavaScript Function</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/fiddler/">Web开发调试工具--Fiddler</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/use-github-build-a-blog/">使用Github Pages 搭建静态博客</a>
           </li>
         
           <li>
