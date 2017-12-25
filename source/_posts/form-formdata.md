@@ -61,10 +61,21 @@ tags:
 ## Formdata
 
 
+`FormData`是XMLHttpRequest Level 2新添加的一个接口,使用`FormData`对象可以把Form表单中所有符合条件的表单元素的name与value的执组成一个queryString提交到后台.`FormData`可以减少queryString的拼接.
 
+`FormData`可以让我们很方便的组织一个键值对的集合.其实就是表单元素的序列化.主要的作用就是用来发送表单数据.但是可以独立于表单传输的数据.
 
+`FormData`最大的优势就是可以上传二进制文件. 创建新FormData对象,然后把表单元素作为参数传入,就能得到Form表单的FormData对象.
 
-
+```javascript
+//Todo
+//formdata initial with form 
+```
+可以用来上传文件
+```javascript
+//Todo
+//upload file
+```
 
 
 ## Reference
