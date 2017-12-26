@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/24/Map/" data-id="cjbm07b420000n581s4i4yfcm" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/24/Map/" data-id="cjbnsdfhg0000n18qq1b01n80" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Key-Value-Pair/">Key-Value Pair</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li></ul>
@@ -190,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbm07b4q0005n581k1wz0ika" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbnsdfi80005n18q2j8zcd1k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -250,8 +250,8 @@
 <h2 id="Formdata"><a href="#Formdata" class="headerlink" title="Formdata"></a>Formdata</h2><p><code>FormData</code>是XMLHttpRequest Level 2新添加的一个接口,使用<code>FormData</code>对象可以把Form表单中所有符合条件的表单元素的name与value的执组成一个queryString提交到后台.<code>FormData</code>可以减少queryString的拼接.</p>
 <p><code>FormData</code>可以让我们很方便的组织一个键值对的集合.其实就是表单元素的序列化.主要的作用就是用来发送表单数据.但是可以独立于表单传输的数据.</p>
 <p><code>FormData</code>最大的优势就是可以上传二进制文件. 创建新FormData对象,然后把表单元素作为参数传入,就能得到Form表单的FormData对象.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Todo</span></span><br><span class="line"><span class="comment">//formdata initial with form</span></span><br></pre></td></tr></table></figure>
-<p>可以用来上传文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Todo</span></span><br><span class="line"><span class="comment">//upload file</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"uploadForm"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"file"</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"upload"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>upload<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">'/upload'</span>,</span><br><span class="line">    type: <span class="string">'POST'</span>,</span><br><span class="line">    cache: <span class="literal">false</span>,</span><br><span class="line">    data: <span class="keyword">new</span> FormData($(<span class="string">'#uploadForm'</span>)[<span class="number">0</span>]),</span><br><span class="line">    processData: <span class="literal">false</span>,</span><br><span class="line">    contentType: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;&#125;)</span><br><span class="line">.fail(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
 <li><a href="http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html" target="_blank" rel="noopener">http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html</a></li>
 <li><p><a href="http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772" target="_blank" rel="noopener">http://blog.csdn.net/ajianyingxiaoqinghan/article/details/77678772</a></p>
@@ -264,7 +264,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbm07b4l0003n581vt38aqws" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbnsdfi10003n18qsr2oxfze" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Form/">Form</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -315,7 +315,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbm07b4t0007n581yyqoui6z" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbnsdfic0007n18q5zzk7mkf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -367,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/08/fiddler/" data-id="cjbm07b4d0001n581wk0mq9kp" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/08/fiddler/" data-id="cjbnsdfhr0001n18qmku05vxc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
@@ -414,7 +414,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/04/hello-world/" data-id="cjbm07b4o0004n5817oaud5vq" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/04/hello-world/" data-id="cjbnsdfi50004n18qmbaig0ba" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
@@ -471,7 +471,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/04/use-github-build-a-blog/" data-id="cjbm07b4w0008n581gxl2qpf7" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/04/use-github-build-a-blog/" data-id="cjbnsdfif0008n18qfeqj8ln9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
