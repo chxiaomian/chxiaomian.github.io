@@ -67,14 +67,25 @@ tags:
 
 `FormData`最大的优势就是可以上传二进制文件. 创建新FormData对象,然后把表单元素作为参数传入,就能得到Form表单的FormData对象.
 
-```javascript
-//Todo
-//formdata initial with form 
+
+```html
+<form id="uploadForm" enctype="multipart/form-data">
+    <input id="file" type="file" name="file"/>
+    <button id="upload" type="button">upload</button>
+</form>
 ```
-可以用来上传文件
+
 ```javascript
-//Todo
-//upload file
+$.ajax({
+    url: '/upload',
+    type: 'POST',
+    cache: false,
+    data: new FormData($('#uploadForm')[0]),
+    processData: false,
+    contentType: false
+})
+.done(function(res) {})
+.fail(function(res) {});
 ```
 
 
