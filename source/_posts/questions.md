@@ -61,10 +61,6 @@ $('#table').datagrid({
     pagination: false,//是否分页
     fit: false,
     fitColumns: false,
-    onClickRow: function (rowIndex, rowData) {
-        pt.v.mz_cf_xycf_cf_table.datagrid('beginEdit', rowIndex);
-        initData.bindEvent();
-    },
     columns: [[
         { field: 'ck', width: '110', checkbox: true }
     ]]
