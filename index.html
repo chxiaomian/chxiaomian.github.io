@@ -105,14 +105,14 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$( <span class="string">"form"</span> ).submit(<span class="function"><span class="keyword">function</span>(<span class="params"> event </span>) </span>&#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>我使用第二种方案解决了这个问题.</p>
 <h3 id="2-easyui-datagrid-问题"><a href="#2-easyui-datagrid-问题" class="headerlink" title="2. easyui datagrid 问题"></a>2. easyui datagrid 问题</h3><p>今天遇到一个问题,easyui datagrid 初始化的时候,添加<code>width: &#39;auto&#39;</code>,table就不见了.<br>代码如下:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#table'</span>).datagrid(&#123;</span><br><span class="line">    idField: <span class="string">'ypmlid'</span>,</span><br><span class="line">    <span class="comment">//width: 'auto',</span></span><br><span class="line">    height: <span class="number">250</span>,</span><br><span class="line">    singleSelect: <span class="literal">false</span>,</span><br><span class="line">    pagination: <span class="literal">false</span>,<span class="comment">//是否分页</span></span><br><span class="line">    fit: <span class="literal">false</span>,</span><br><span class="line">    fitColumns: <span class="literal">false</span>,</span><br><span class="line">    onClickRow: <span class="function"><span class="keyword">function</span> (<span class="params">rowIndex, rowData</span>) </span>&#123;</span><br><span class="line">        pt.v.mz_cf_xycf_cf_table.datagrid(<span class="string">'beginEdit'</span>, rowIndex);</span><br><span class="line">        initData.bindEvent();</span><br><span class="line">    &#125;,</span><br><span class="line">    columns: [[</span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">'ck'</span>, <span class="attr">width</span>: <span class="string">'110'</span>, <span class="attr">checkbox</span>: <span class="literal">true</span> &#125;</span><br><span class="line">    ]]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#table'</span>).datagrid(&#123;</span><br><span class="line">    idField: <span class="string">'ypmlid'</span>,</span><br><span class="line">    <span class="comment">//width: 'auto',</span></span><br><span class="line">    height: <span class="number">250</span>,</span><br><span class="line">    singleSelect: <span class="literal">false</span>,</span><br><span class="line">    pagination: <span class="literal">false</span>,<span class="comment">//是否分页</span></span><br><span class="line">    fit: <span class="literal">false</span>,</span><br><span class="line">    fitColumns: <span class="literal">false</span>,</span><br><span class="line">    columns: [[</span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">'ck'</span>, <span class="attr">width</span>: <span class="string">'110'</span>, <span class="attr">checkbox</span>: <span class="literal">true</span> &#125;</span><br><span class="line">    ]]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>注释掉 <code>width: &#39;auto&#39;</code> 问题就解决了.</p>
 <p>太坑了,搞一晚上也不知道为啥…………..</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/27/questions/" data-id="cjbqopxwd0008nd8sypqi97bj" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/27/questions/" data-id="cjbqor5b90008nc8u5dbhfrc4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BootStrap/">BootStrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -171,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/24/Map/" data-id="cjbqopxvs0000nd8sdv6tvioo" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/24/Map/" data-id="cjbqor5an0000nc8u5mk6hkk3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Key-Value-Pair/">Key-Value Pair</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li></ul>
@@ -249,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbqopxw90005nd8sxjwxb1w0" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/22/javascript-function/" data-id="cjbqor5b50005nc8uou27bhpw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -323,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbqopxw60003nd8ssd0a9bgf" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/form-formdata/" data-id="cjbqor5b10003nc8u6467pkb0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Form/">Form</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -374,7 +374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbqopxwb0007nd8syh9dga12" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2017/12/21/javascript-type-judgement/" data-id="cjbqor5b70007nc8uu1d6wbwv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -426,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/08/fiddler/" data-id="cjbqopxw00001nd8s81tsb68n" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/08/fiddler/" data-id="cjbqor5au0001nc8uzih0q1we" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
@@ -473,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/04/hello-world/" data-id="cjbqopxw80004nd8si59kx0r6" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/04/hello-world/" data-id="cjbqor5b30004nc8un0c7r1la" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
@@ -530,7 +530,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chxiaomian.github.io/2016/05/04/use-github-build-a-blog/" data-id="cjbqopxwg000bnd8saj0pk0oo" class="article-share-link">Share</a>
+      <a data-url="http://chxiaomian.github.io/2016/05/04/use-github-build-a-blog/" data-id="cjbqor5bb000bnc8uvor3u975" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
