@@ -6,7 +6,7 @@ tags:
     - jQuery
 ---
 
-### 1.BootStrap模态框回车刷新的问题
+### 1. BootStrap模态框回车刷新的问题
 
 最近开发一个需求,需要在BootStrap的模态框中实现回车键查询功能,每次按下回车键的时候,页面就会刷新,点击查询按钮则没有问题.
 Google了一下发现很多人遇到了这个问题.
@@ -45,6 +45,34 @@ $( "form" ).submit(function( event ) {
 我使用第二种方案解决了这个问题.
 
 
+
+
+### 2. easyui datagrid 问题
+
+今天遇到一个问题,easyui datagrid 初始化的时候,添加`width: 'auto'`,table就不见了.
+代码如下:
+
+```javascript
+$('#table').datagrid({
+    idField: 'ypmlid',
+    //width: 'auto',
+    height: 250,
+    singleSelect: false,
+    pagination: false,//是否分页
+    fit: false,
+    fitColumns: false,
+    onClickRow: function (rowIndex, rowData) {
+        pt.v.mz_cf_xycf_cf_table.datagrid('beginEdit', rowIndex);
+        initData.bindEvent();
+    },
+    columns: [[
+        { field: 'ck', width: '110', checkbox: true }
+    ]]
+});
+```
+注释掉 `width: 'auto'` 问题就解决了.
+
+太坑了,搞一晚上也不知道为啥..............
 
 
 
